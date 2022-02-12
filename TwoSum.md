@@ -22,12 +22,10 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        res=[]
-        for i in range(0,len(nums)):
-            for j in range(i+1,len(nums)):
-                
-                if nums[i]+nums[j]==target:
-                    return [i, j]
+        for i in range(0, len(nums)):
+            for x in range(i+1, len(nums)):
+                if nums[i]+ nums[x] == target:
+                    return [i,x]
 ```
 
 [other solutions](https://leetcode.com/problems/two-sum/solution/)

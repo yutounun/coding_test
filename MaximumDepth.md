@@ -83,6 +83,12 @@ class Solution:
             return 0
 ```
 
+```python
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right)) if root else 0
+```
+
 再帰関数で一回再帰するごとに一個深い層を見ている
 
 1. rootは左右両方あるからreturn1

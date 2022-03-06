@@ -52,6 +52,7 @@ class Solution:
 
 
 set(集合)は並び順など関係ないので、O(n)となり、much faster than appending to a list.
+INDEX番号とか順序関係ない問題だから、setの方が圧倒的に良い
 
 ```python
 class Solution:
@@ -62,5 +63,7 @@ class Solution:
             if x in S: S.remove(x)
             else: S.add(x)
         
+        # このときのSにはダブってない数値が一つだけ入ってる(1,)みたいに。
+        # 順序がないから取得する方法はpopでよい
         return S.pop()
 ```

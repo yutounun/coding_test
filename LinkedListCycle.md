@@ -35,16 +35,13 @@ pos is -1 or a valid index in the linked-list.
 
 # solution
 ```python
-class Solution:
-    def hasCycle(self, head: ListNode) -> bool:
-        # using hashmap(hashtable, dict) instead of arr make speed of excecution faster but use more memory
-        hashmap = {}
-        while head != None:
-            # if next head is in hashmap
-            if head in hashmap:
-                return True
-            # hashmap{[head: ???]}
-            hashmap[head] = head
-            head = head.next
-        return False
+class Solution(object):
+    def removeDuplicates(self, nums):
+        i=0
+        while i<len(nums)-1:
+            if nums[i] == nums[i+1]:
+                nums.pop(i)
+            else:
+                i += 1
+        return len(nums)
 ```
